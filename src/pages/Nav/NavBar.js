@@ -29,7 +29,7 @@ const NavBar = () => {
             <span className="bg-red-500 rounded-full text-center text-xs absolute -top-2 -left-3 w-5 block">{totalQty}</span>
           </Link>
         </p>
-        {openMenu && <MobileNav children={["laptops", "phones", "accessories", "gaming", "others"]} />}
+        {openMenu && <MobileNav/>}
       </div>
 
       <div className=" lg:flex justify-between hidden">

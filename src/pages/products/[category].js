@@ -1,11 +1,10 @@
 import React from "react";
 import { client } from "../../lib/client";
-import { useRouter } from "next/router";
 import Products from "./comps/Products";
 import NavBar from "../Nav/NavBar";
 
 const index = ({products, cat}) => {
-const router = useRouter()
+
   return <div>
     <NavBar/>
   <Products products={products} category={cat}/>
