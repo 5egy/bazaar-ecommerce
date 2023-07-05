@@ -13,10 +13,10 @@ const Products = ({ products, category }) => {
       </div>
 
       {products !== undefined ? (
-       <> <div className="grid grid-cols-topProd md:grid-cols-bigProd gap-3 mt-7 lg:mt-12">
-          <h1 className="w-full text-center text-2xl [#6a2d72]">
+         <> <h1 className="w-full text-center text-2xl [#6a2d72]">
           {category[0].toUpperCase() + category.slice(1) || ""}
         </h1>
+        <div className="grid grid-cols-topProd md:grid-cols-bigProd gap-3 mt-7 lg:mt-12">
        {products.map((product) => {
          return <Prod product={product} key={product.id} />;
        })}
