@@ -1,11 +1,8 @@
 import Image from "next/image";
-import iphone from "../../assets/iphone1401.png";
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { FaHeart, FaStar } from "react-icons/fa";
-import { useContext } from "react";
-import { dataContext } from "../index";
+import { FaHeart} from "react-icons/fa";
 import ImageUrlBuilder  from "@sanity/image-url";
 import { client } from "../../lib/client";
 import  Link  from "next/link";
