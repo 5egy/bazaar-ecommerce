@@ -22,7 +22,7 @@ const Items = ({ heading, products }) => {
           1025: { slidesPerView: 4.2, spaceBetween: 5 },
         }}
       >
-        {products.map((prod) => {
+        {products !== undefined && products.map((prod) => {
           return (
             <SwiperSlide key={prod.id}>
               <SlideItem

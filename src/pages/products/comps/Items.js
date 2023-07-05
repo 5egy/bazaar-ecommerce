@@ -10,7 +10,9 @@ const Prod = ({ product }) => {
 
   return (
     <div className="w-full h-full min-h-[300px]  border-2 border-[#6a2d72] rounded-md flex flex-col justify-between items-start">
-      <div className="p-2 text-[#6a2d72] w-full">
+    {
+    product !== undefined ?  <>
+        <div className="p-2 text-[#6a2d72] w-full">
        <Link href={`/product/${product.slug.current}`}>
         <h3 className="text-base">{product.name}</h3>
         <p className="flex justify-between mt-2 text-sm">
@@ -36,7 +38,8 @@ const Prod = ({ product }) => {
       <Rating rate={product.rating}/>
         <button className="w-full p-2 mt-0 bg-[#6a2d72] text-white">View</button>
         </Link>
-      </div>
+      </div></> : <p>...</p>
+    }
     </div>
   );
 };

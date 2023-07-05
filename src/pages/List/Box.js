@@ -13,7 +13,7 @@ const Box = ({ products }) => {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-5 mt-8">
-        {products.slice(0, 4).map((prod) => {
+        {products !== undefined && products.slice(0, 4).map((prod) => {
           return (
             <Content
               name={prod.name}

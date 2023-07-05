@@ -13,7 +13,9 @@ const HotProduct = ({ right, product, head }) => {
         right ? "sm:flex-row-reverse" : "sm:flex-row"
       }`}
     >
-        <Image
+       {
+
+       product !== undefined && <> <Image
         width={500}
         height={500}
         blurDataURL={builder.image(product.mainImage).url()}
@@ -36,7 +38,8 @@ const HotProduct = ({ right, product, head }) => {
         >
           Buy Now
         </Link>
-      </div>
+      </div></>
+       }
     </div>
   );
 };
