@@ -22,7 +22,7 @@ const NavBar = () => {
         >
           {!openMenu ? <FaBars /> : <FaTimes />}
         </p>
-        <p><Link href={"/"}>BAZAAR</Link></p>
+        <p><Link href={"/"}>BAZAAR </Link></p>
         <p className="cursor-pointer text-xl">
           <Link href={"/cart"} className="hover:text-[#e83cff] duration-300 relative">
             <ImCart />
