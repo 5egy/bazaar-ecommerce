@@ -3,6 +3,7 @@ import { client } from "../../../lib/client";
 import ImageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
 import Rating from "../../others/Rating";
+import Image from "next/image";
 
 const Prod = ({ product }) => {
   const builder = ImageUrlBuilder(client);
@@ -21,7 +22,10 @@ const Prod = ({ product }) => {
 
       <div>
       <Link href={`/product/${product.slug.current}`}>
-          <img
+      <Image
+            width={500}
+            height={500}
+            blurDataURL={builder.image(product.mainImage).url()}
             src={builder.image(product.mainImage).url()}
             placeholder="blur"
             alt={product.name + "product-image"}

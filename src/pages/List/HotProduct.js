@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { client } from "../../lib/client";
 import ImageUrlBuilder from "@sanity/image-url";
+import Image from "next/image"
 
 const HotProduct = ({ right, product, head }) => {
   const builder = ImageUrlBuilder(client);
@@ -12,7 +13,10 @@ const HotProduct = ({ right, product, head }) => {
         right ? "sm:flex-row-reverse" : "sm:flex-row"
       }`}
     >
-      <img
+        <Image
+        width={500}
+        height={500}
+        blurDataURL={builder.image(product.mainImage).url()}
         src={builder.image(product.mainImage).url()}
         className="w-full h-auto"
         alt="iphone14"

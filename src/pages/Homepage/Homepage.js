@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import ImageUrlBuilder  from "@sanity/image-url";
 import { client } from "../../lib/client";
+import Image from 'next/image';
 
 const Homepage = ({product}) => {
   const builder = ImageUrlBuilder(client)
@@ -15,7 +16,7 @@ const Homepage = ({product}) => {
 
 </div>
 
- <img src={builder.image(product.mainImage).url()} alt="Iphone xs max" placeholder='blur' className='w-full md:w-3/5 h-full'/>
+ <Image src={builder.image(product.mainImage).url()} width={500} height={500} blurDataURL={builder.image(product.mainImage).url()} alt="Iphone xs max" placeholder='blur' className='w-full md:w-3/5 h-full'/>
     </header>
   )
 }

@@ -2,13 +2,17 @@ import React from "react";
 
 import { client } from "../../lib/client";
 import ImageUrlBuilder from "@sanity/image-url";
+import Image from "next/image";
 
 const Item = ({ item, incr, decr, remove}) => {
   const builder = ImageUrlBuilder(client);
   
   return (
     <div className="bg-blur-500 text-sm bg-[#fddaff] w-full shadow-md shadow-[#6a2d72] text-[#6a2d72] mx-auto my-4 flex items-center  justify-between p-2">
-      <img
+      <Image
+            width={500}
+            height={500}
+            blurDataURL={builder.image(item.mainImage).url()}
         src={builder.image(item.mainImage).url()}
         alt={item.name}
         placeholder="blur"

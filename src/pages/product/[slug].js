@@ -1,16 +1,17 @@
 "use client";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { FaCheck, FaCircle } from "react-icons/fa";
 import { client } from "../../lib/client";
 import ImageUrlBuilder from "@sanity/image-url";
 import NavBar from "../Nav/NavBar";
 import { useStateContext } from "../../../context/StateContext";
 import Rating from "../others/Rating";
+import Image from "next/image";
 
 const View = ({ product }) => {
   const builder = ImageUrlBuilder(client);
   const { addToCart } = useStateContext();
-  const [mainImage, setMainImage] = useState(0)
+  const [mainImage, setMainImage] = useState(0);
   return (
     <div
       className={`flex justify-center flex-col py-5 shadow-md shadow-[#6a2d72] sm:flex-row mt-24`}
@@ -25,18 +26,30 @@ const View = ({ product }) => {
             <div className="absolute top-0 left-0 w-12 h-full flex flex-col justify-center gap-2 ">
               {product.galleryImages.map((item, index) => {
                 return (
-                  <img
+                  <Image
+                    width={500}
+                    height={500}
+                    blurDataURL={builder.image(item).url()}
                     src={builder.image(item).url()}
                     placeholder="blur"
                     alt={product.name + "image"}
-                    className={`w-full h-auto border-4 rounded-md ${index === mainImage ? "border-[#e83cff] translate-x-2" : "border-[#6a2d72]"} cursor-pointer hover:translate-x-2 hover:border-[#e83cff] duration-500`}
+                    className={`w-full h-auto border-4 rounded-md ${
+                      index === mainImage
+                        ? "border-[#e83cff] translate-x-2"
+                        : "border-[#6a2d72]"
+                    } cursor-pointer hover:translate-x-2 hover:border-[#e83cff] duration-500`}
                     key={item._key}
-                    onMouseEnter={()=>setMainImage(index)}
+                    onMouseEnter={() => setMainImage(index)}
                   />
                 );
               })}
             </div>
-            <img
+            <Image
+              width={500}
+              height={500}
+              blurDataURL={builder
+                .image(product.galleryImages[mainImage])
+                .url()}
               src={builder.image(product.galleryImages[mainImage]).url()}
               placeholder="blur"
               alt={product.name + "image"}
