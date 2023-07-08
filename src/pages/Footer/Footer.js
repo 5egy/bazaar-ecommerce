@@ -50,7 +50,7 @@ export default Footer;
 function List({ head, child }) {
   return (
     <ul className="list-none p-2 m-2 text-center">
-      <li className="text-xl md:text-2xl  text-white my-4">
+      <li className="text-xl md:text-2xl  text-[#e83cff] my-4">
         <h3>{head}</h3>
       </li>
       {child.map((item) => {
