@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import {Navigation} from "swiper"
 import { FaHeart } from "react-icons/fa";
 import ImageUrlBuilder from "@sanity/image-url";
 import { client } from "../../lib/client";
@@ -9,6 +11,12 @@ import Link from "next/link";
 import Rating from "../others/Rating";
 
 const Items = ({ heading, products }) => {
+  const[ screen , setScreen]= useState(0)
+
+  useEffect(()=>{
+    setScreen(window.screen.availWidth)
+  }, [])
+
   return (
     <div className="w-full text-center shadow-md shadow-[#6a2d72] py-5">
       <h2 className="text-xl md:text-2xl text-[#6a2d72]">{heading}</h2>
@@ -21,6 +29,8 @@ const Items = ({ heading, products }) => {
           720: { slidesPerView: 3.5, spaceBetween: 30 },
           1025: { slidesPerView: 4.2, spaceBetween: 5 },
         }}
+        navigation={screen > 719 && true}
+        modules={[Navigation]}
       >
         {products !== undefined && products.map((prod) => {
           return (
