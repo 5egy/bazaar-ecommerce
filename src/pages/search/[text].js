@@ -5,7 +5,7 @@ import NotFound from "../products/comps/NotFound";
 
 import NavBar from "../Nav/NavBar";
 
-const index = ({ products, cat }) => {
+const Index = ({ products, cat }) => {
   const [newProducts, setNewProducts] = useState([]);
 
   useEffect(() => {
@@ -13,9 +13,9 @@ const index = ({ products, cat }) => {
       const itemName = item.name.toLowerCase();
       return itemName.includes(cat.toLowerCase());
     });
-
+console.log("HHH")
     setNewProducts([...prod]);
-  },[cat]);
+  },[cat, products]);
 
 
   return (
@@ -36,4 +36,4 @@ export const getServerSideProps = async ({ params: { text } }) => {
   };
 };
 
-export default index;
+export default Index;
