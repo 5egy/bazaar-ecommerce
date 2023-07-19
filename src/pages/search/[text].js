@@ -13,7 +13,6 @@ const Index = ({ products, cat }) => {
       const itemName = item.name.toLowerCase();
       return itemName.includes(cat.toLowerCase());
     });
-console.log("HHH")
     setNewProducts([...prod]);
   },[cat, products]);
 
