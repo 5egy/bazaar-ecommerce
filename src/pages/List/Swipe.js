@@ -33,6 +33,7 @@ const Items = ({ heading, products }) => {
         modules={[Navigation]}
       >
         {products !== undefined && products.map((prod) => {
+         
           return (
             <SwiperSlide key={prod.id}>
               <SlideItem
