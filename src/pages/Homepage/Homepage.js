@@ -8,7 +8,7 @@ const Homepage = ({ product }) => {
   const builder = ImageUrlBuilder(client);
 
   return (
-    <header className="h-[100vh] mt-24 lg:min-h-[500px] text-[#6a2d72] min-h-[300px] flex justify-center items-center flex-col md:flex-row pb-0 shadow-lg shadow-[#6a2d72]">
+    <header className="h-[100vh] px-2 mt-24 lg:min-h-[500px] text-[#6a2d72] min-h-[300px] flex justify-center items-center flex-col md:flex-row pb-0 shadow-lg shadow-[#6a2d72]">
       {
         product !== undefined ? <>
           <div className="w-full md:w-2/5 text-center h-full flex flex-col justify-center">

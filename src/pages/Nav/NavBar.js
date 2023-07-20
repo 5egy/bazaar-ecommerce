@@ -11,7 +11,7 @@ const NavBar = ({ products }) => {
   const { totalQty } = useStateContext();
 
   return (
-    <nav className="bg-white shadow-md shadow-[#6a2d72] text-[#6a2d72] fixed top-0 left-0 w-full z-[90000] p-2">
+    <nav className="bg-white shadow-md px-3 shadow-[#6a2d72] text-[#6a2d72] fixed top-0 left-0 w-full z-[90000] p-2">
       <div className=" flex justify-between lg:hidden relative">
         {" "}
         <p
@@ -20,7 +20,7 @@ const NavBar = ({ products }) => {
         >
           {!openMenu ? <FaBars /> : <FaTimes />}
         </p>
-        <p>
+        <p >
           <Link href={"/"}>BAZAAR </Link>
         </p>
         <p className="cursor-pointer text-xl">
@@ -50,6 +50,26 @@ const NavBar = ({ products }) => {
             >
               laptops{" "}
             </Link>
+
+            <Link
+              href={"/products/phones"}
+              className="cursor-pointer block text-sm hover:text-[#e83cff] duration-300"
+            >
+              phones{" "}
+            </Link>
+            <Link
+              href={"/products/accessories"}
+              className="cursor-pointer block text-sm hover:text-[#e83cff] duration-300"
+            >
+              accessories{" "}
+            </Link>
+            <Link
+              href={"/products/gaming"}
+              className="cursor-pointer block text-sm hover:text-[#e83cff] duration-300"
+            >
+              gaming{" "}
+            </Link>
+
             <Link
               href={"/products/others"}
               className="cursor-pointer block text-sm hover:text-[#e83cff] duration-300"

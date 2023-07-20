@@ -36,7 +36,7 @@ const Cart = () => {
 
   return (
     <div
-      className={`flex justify-center  flex-col py-5 shadow-md shadow-[#6a2d72] items-center md:items-start md:flex-row mt-24`}
+      className={`flex justify-center  flex-col py-5 shadow-md px-2 shadow-[#6a2d72] items-center md:items-start md:flex-row mt-24`}
     >
       <NavBar />
       <div className=" md:w-1/2 w-full h-full">
@@ -75,6 +75,7 @@ const Cart = () => {
         </> : <h2 className="my-4 text-2xl md:text-4xl">Your Cart is Empty</h2>
       }
       </div>
+
     </div>
   );
 };

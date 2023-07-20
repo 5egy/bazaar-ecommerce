@@ -7,7 +7,7 @@ import Image from "next/image";
 const Box = ({ products }) => {
   const builder = ImageUrlBuilder(client);
   return (
-    <div className="pt-4">
+    <div className="pt-4 px-2">
       <h1 className="text-[#6a2d72] text-center text-xl md:text-2xl">
         Top Products
       </h1>

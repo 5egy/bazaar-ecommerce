@@ -5,7 +5,7 @@ import {SlArrowDown} from "react-icons/sl"
 const Products = ({ products, category }) => {
 
   return (
-    <div className="py-20 lg:py-32">
+    <div className="py-20 lg:py-32 px-2">
    
         <div className="w-full flex justify-center md:justify-end opacity-30">
         

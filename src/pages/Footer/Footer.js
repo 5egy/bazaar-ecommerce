@@ -38,7 +38,7 @@ const Footer = () => {
 
       <p className="text-base text-black">
         This Site was designed and developed by{" "}
-        <a className="bg-[#6a2d72] text-white p-1 px-2 hover:bg-[#e83cff] duration-500" target="_blank" href="https://github.com/l4bi">Labi</a>
+        <a className="bg-[#6a2d72] text-white p-1 px-2 hover:bg-[#e83cff] duration-500" target="_blank" href="https://github.com/5egy">Segy</a>
       </p>
       <p className="text-base text-black">2023&copy;</p>
     </footer>

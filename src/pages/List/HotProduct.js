@@ -8,7 +8,7 @@ const HotProduct = ({ right, product, head }) => {
   const builder = ImageUrlBuilder(client);
   
   return (
-    <div
+    <div 
       className={`flex justify-center flex-col py-5 shadow-md shadow-[#6a2d72] ${
         right ? "sm:flex-row-reverse" : "sm:flex-row"
       }`}
